@@ -7,46 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		863562251A583A6F00537DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863562241A583A6F00537DEF /* AppDelegate.swift */; };
-		863562271A583A6F00537DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863562261A583A6F00537DEF /* ViewController.swift */; };
-		8635622A1A583A6F00537DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863562281A583A6F00537DEF /* Main.storyboard */; };
-		8635622C1A583A6F00537DEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8635622B1A583A6F00537DEF /* Images.xcassets */; };
-		8635622F1A583A6F00537DEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8635622D1A583A6F00537DEF /* LaunchScreen.xib */; };
-		8635623B1A583A6F00537DEF /* gerenciadorTarefasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635623A1A583A6F00537DEF /* gerenciadorTarefasTests.swift */; };
+		86112B401A5880180066BD10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86112B3F1A5880180066BD10 /* AppDelegate.swift */; };
+		86112B431A5880180066BD10 /* gerenciadorTarefas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86112B411A5880180066BD10 /* gerenciadorTarefas.xcdatamodeld */; };
+		86112B451A5880180066BD10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86112B441A5880180066BD10 /* ViewController.swift */; };
+		86112B481A5880180066BD10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86112B461A5880180066BD10 /* Main.storyboard */; };
+		86112B4A1A5880180066BD10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86112B491A5880180066BD10 /* Images.xcassets */; };
+		86112B4D1A5880180066BD10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86112B4B1A5880180066BD10 /* LaunchScreen.xib */; };
+		86112B591A5880180066BD10 /* gerenciadorTarefasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86112B581A5880180066BD10 /* gerenciadorTarefasTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		863562351A583A6F00537DEF /* PBXContainerItemProxy */ = {
+		86112B531A5880180066BD10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 863562171A583A6F00537DEF /* Project object */;
+			containerPortal = 86112B321A5880180066BD10 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8635621E1A583A6F00537DEF;
+			remoteGlobalIDString = 86112B391A5880180066BD10;
 			remoteInfo = gerenciadorTarefas;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8635621F1A583A6F00537DEF /* gerenciadorTarefas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gerenciadorTarefas.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		863562231A583A6F00537DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		863562241A583A6F00537DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		863562261A583A6F00537DEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		863562291A583A6F00537DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8635622B1A583A6F00537DEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8635622E1A583A6F00537DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		863562341A583A6F00537DEF /* gerenciadorTarefasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gerenciadorTarefasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		863562391A583A6F00537DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8635623A1A583A6F00537DEF /* gerenciadorTarefasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gerenciadorTarefasTests.swift; sourceTree = "<group>"; };
+		86112B3A1A5880180066BD10 /* gerenciadorTarefas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gerenciadorTarefas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86112B3E1A5880180066BD10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86112B3F1A5880180066BD10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86112B421A5880180066BD10 /* gerenciadorTarefas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gerenciadorTarefas.xcdatamodel; sourceTree = "<group>"; };
+		86112B441A5880180066BD10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86112B471A5880180066BD10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86112B491A5880180066BD10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		86112B4C1A5880180066BD10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		86112B521A5880180066BD10 /* gerenciadorTarefasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gerenciadorTarefasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86112B571A5880180066BD10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86112B581A5880180066BD10 /* gerenciadorTarefasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gerenciadorTarefasTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8635621C1A583A6F00537DEF /* Frameworks */ = {
+		86112B371A5880180066BD10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		863562311A583A6F00537DEF /* Frameworks */ = {
+		86112B4F1A5880180066BD10 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,58 +58,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		863562161A583A6F00537DEF = {
+		86112B311A5880180066BD10 = {
 			isa = PBXGroup;
 			children = (
-				863562211A583A6F00537DEF /* gerenciadorTarefas */,
-				863562371A583A6F00537DEF /* gerenciadorTarefasTests */,
-				863562201A583A6F00537DEF /* Products */,
+				86112B3C1A5880180066BD10 /* gerenciadorTarefas */,
+				86112B551A5880180066BD10 /* gerenciadorTarefasTests */,
+				86112B3B1A5880180066BD10 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		863562201A583A6F00537DEF /* Products */ = {
+		86112B3B1A5880180066BD10 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8635621F1A583A6F00537DEF /* gerenciadorTarefas.app */,
-				863562341A583A6F00537DEF /* gerenciadorTarefasTests.xctest */,
+				86112B3A1A5880180066BD10 /* gerenciadorTarefas.app */,
+				86112B521A5880180066BD10 /* gerenciadorTarefasTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		863562211A583A6F00537DEF /* gerenciadorTarefas */ = {
+		86112B3C1A5880180066BD10 /* gerenciadorTarefas */ = {
 			isa = PBXGroup;
 			children = (
-				863562241A583A6F00537DEF /* AppDelegate.swift */,
-				863562261A583A6F00537DEF /* ViewController.swift */,
-				863562281A583A6F00537DEF /* Main.storyboard */,
-				8635622B1A583A6F00537DEF /* Images.xcassets */,
-				8635622D1A583A6F00537DEF /* LaunchScreen.xib */,
-				863562221A583A6F00537DEF /* Supporting Files */,
+				86112B3F1A5880180066BD10 /* AppDelegate.swift */,
+				86112B441A5880180066BD10 /* ViewController.swift */,
+				86112B461A5880180066BD10 /* Main.storyboard */,
+				86112B491A5880180066BD10 /* Images.xcassets */,
+				86112B4B1A5880180066BD10 /* LaunchScreen.xib */,
+				86112B411A5880180066BD10 /* gerenciadorTarefas.xcdatamodeld */,
+				86112B3D1A5880180066BD10 /* Supporting Files */,
 			);
 			path = gerenciadorTarefas;
 			sourceTree = "<group>";
 		};
-		863562221A583A6F00537DEF /* Supporting Files */ = {
+		86112B3D1A5880180066BD10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				863562231A583A6F00537DEF /* Info.plist */,
+				86112B3E1A5880180066BD10 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		863562371A583A6F00537DEF /* gerenciadorTarefasTests */ = {
+		86112B551A5880180066BD10 /* gerenciadorTarefasTests */ = {
 			isa = PBXGroup;
 			children = (
-				8635623A1A583A6F00537DEF /* gerenciadorTarefasTests.swift */,
-				863562381A583A6F00537DEF /* Supporting Files */,
+				86112B581A5880180066BD10 /* gerenciadorTarefasTests.swift */,
+				86112B561A5880180066BD10 /* Supporting Files */,
 			);
 			path = gerenciadorTarefasTests;
 			sourceTree = "<group>";
 		};
-		863562381A583A6F00537DEF /* Supporting Files */ = {
+		86112B561A5880180066BD10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				863562391A583A6F00537DEF /* Info.plist */,
+				86112B571A5880180066BD10 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -115,13 +118,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8635621E1A583A6F00537DEF /* gerenciadorTarefas */ = {
+		86112B391A5880180066BD10 /* gerenciadorTarefas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8635623E1A583A6F00537DEF /* Build configuration list for PBXNativeTarget "gerenciadorTarefas" */;
+			buildConfigurationList = 86112B5C1A5880180066BD10 /* Build configuration list for PBXNativeTarget "gerenciadorTarefas" */;
 			buildPhases = (
-				8635621B1A583A6F00537DEF /* Sources */,
-				8635621C1A583A6F00537DEF /* Frameworks */,
-				8635621D1A583A6F00537DEF /* Resources */,
+				86112B361A5880180066BD10 /* Sources */,
+				86112B371A5880180066BD10 /* Frameworks */,
+				86112B381A5880180066BD10 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -129,46 +132,46 @@
 			);
 			name = gerenciadorTarefas;
 			productName = gerenciadorTarefas;
-			productReference = 8635621F1A583A6F00537DEF /* gerenciadorTarefas.app */;
+			productReference = 86112B3A1A5880180066BD10 /* gerenciadorTarefas.app */;
 			productType = "com.apple.product-type.application";
 		};
-		863562331A583A6F00537DEF /* gerenciadorTarefasTests */ = {
+		86112B511A5880180066BD10 /* gerenciadorTarefasTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 863562411A583A6F00537DEF /* Build configuration list for PBXNativeTarget "gerenciadorTarefasTests" */;
+			buildConfigurationList = 86112B5F1A5880180066BD10 /* Build configuration list for PBXNativeTarget "gerenciadorTarefasTests" */;
 			buildPhases = (
-				863562301A583A6F00537DEF /* Sources */,
-				863562311A583A6F00537DEF /* Frameworks */,
-				863562321A583A6F00537DEF /* Resources */,
+				86112B4E1A5880180066BD10 /* Sources */,
+				86112B4F1A5880180066BD10 /* Frameworks */,
+				86112B501A5880180066BD10 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				863562361A583A6F00537DEF /* PBXTargetDependency */,
+				86112B541A5880180066BD10 /* PBXTargetDependency */,
 			);
 			name = gerenciadorTarefasTests;
 			productName = gerenciadorTarefasTests;
-			productReference = 863562341A583A6F00537DEF /* gerenciadorTarefasTests.xctest */;
+			productReference = 86112B521A5880180066BD10 /* gerenciadorTarefasTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		863562171A583A6F00537DEF /* Project object */ = {
+		86112B321A5880180066BD10 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Eduardo dos santos";
+				ORGANIZATIONNAME = megamil;
 				TargetAttributes = {
-					8635621E1A583A6F00537DEF = {
+					86112B391A5880180066BD10 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					863562331A583A6F00537DEF = {
+					86112B511A5880180066BD10 = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 8635621E1A583A6F00537DEF;
+						TestTargetID = 86112B391A5880180066BD10;
 					};
 				};
 			};
-			buildConfigurationList = 8635621A1A583A6F00537DEF /* Build configuration list for PBXProject "gerenciadorTarefas" */;
+			buildConfigurationList = 86112B351A5880180066BD10 /* Build configuration list for PBXProject "gerenciadorTarefas" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -176,29 +179,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 863562161A583A6F00537DEF;
-			productRefGroup = 863562201A583A6F00537DEF /* Products */;
+			mainGroup = 86112B311A5880180066BD10;
+			productRefGroup = 86112B3B1A5880180066BD10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8635621E1A583A6F00537DEF /* gerenciadorTarefas */,
-				863562331A583A6F00537DEF /* gerenciadorTarefasTests */,
+				86112B391A5880180066BD10 /* gerenciadorTarefas */,
+				86112B511A5880180066BD10 /* gerenciadorTarefasTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8635621D1A583A6F00537DEF /* Resources */ = {
+		86112B381A5880180066BD10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8635622A1A583A6F00537DEF /* Main.storyboard in Resources */,
-				8635622F1A583A6F00537DEF /* LaunchScreen.xib in Resources */,
-				8635622C1A583A6F00537DEF /* Images.xcassets in Resources */,
+				86112B481A5880180066BD10 /* Main.storyboard in Resources */,
+				86112B4D1A5880180066BD10 /* LaunchScreen.xib in Resources */,
+				86112B4A1A5880180066BD10 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		863562321A583A6F00537DEF /* Resources */ = {
+		86112B501A5880180066BD10 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,46 +211,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8635621B1A583A6F00537DEF /* Sources */ = {
+		86112B361A5880180066BD10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				863562271A583A6F00537DEF /* ViewController.swift in Sources */,
-				863562251A583A6F00537DEF /* AppDelegate.swift in Sources */,
+				86112B451A5880180066BD10 /* ViewController.swift in Sources */,
+				86112B431A5880180066BD10 /* gerenciadorTarefas.xcdatamodeld in Sources */,
+				86112B401A5880180066BD10 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		863562301A583A6F00537DEF /* Sources */ = {
+		86112B4E1A5880180066BD10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8635623B1A583A6F00537DEF /* gerenciadorTarefasTests.swift in Sources */,
+				86112B591A5880180066BD10 /* gerenciadorTarefasTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		863562361A583A6F00537DEF /* PBXTargetDependency */ = {
+		86112B541A5880180066BD10 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8635621E1A583A6F00537DEF /* gerenciadorTarefas */;
-			targetProxy = 863562351A583A6F00537DEF /* PBXContainerItemProxy */;
+			target = 86112B391A5880180066BD10 /* gerenciadorTarefas */;
+			targetProxy = 86112B531A5880180066BD10 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		863562281A583A6F00537DEF /* Main.storyboard */ = {
+		86112B461A5880180066BD10 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				863562291A583A6F00537DEF /* Base */,
+				86112B471A5880180066BD10 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8635622D1A583A6F00537DEF /* LaunchScreen.xib */ = {
+		86112B4B1A5880180066BD10 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8635622E1A583A6F00537DEF /* Base */,
+				86112B4C1A5880180066BD10 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -255,7 +259,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8635623C1A583A6F00537DEF /* Debug */ = {
+		86112B5A1A5880180066BD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,7 +302,7 @@
 			};
 			name = Debug;
 		};
-		8635623D1A583A6F00537DEF /* Release */ = {
+		86112B5B1A5880180066BD10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -334,7 +338,7 @@
 			};
 			name = Release;
 		};
-		8635623F1A583A6F00537DEF /* Debug */ = {
+		86112B5D1A5880180066BD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -344,7 +348,7 @@
 			};
 			name = Debug;
 		};
-		863562401A583A6F00537DEF /* Release */ = {
+		86112B5E1A5880180066BD10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -354,7 +358,7 @@
 			};
 			name = Release;
 		};
-		863562421A583A6F00537DEF /* Debug */ = {
+		86112B601A5880180066BD10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -373,7 +377,7 @@
 			};
 			name = Debug;
 		};
-		863562431A583A6F00537DEF /* Release */ = {
+		86112B611A5880180066BD10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -391,32 +395,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8635621A1A583A6F00537DEF /* Build configuration list for PBXProject "gerenciadorTarefas" */ = {
+		86112B351A5880180066BD10 /* Build configuration list for PBXProject "gerenciadorTarefas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8635623C1A583A6F00537DEF /* Debug */,
-				8635623D1A583A6F00537DEF /* Release */,
+				86112B5A1A5880180066BD10 /* Debug */,
+				86112B5B1A5880180066BD10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8635623E1A583A6F00537DEF /* Build configuration list for PBXNativeTarget "gerenciadorTarefas" */ = {
+		86112B5C1A5880180066BD10 /* Build configuration list for PBXNativeTarget "gerenciadorTarefas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8635623F1A583A6F00537DEF /* Debug */,
-				863562401A583A6F00537DEF /* Release */,
+				86112B5D1A5880180066BD10 /* Debug */,
+				86112B5E1A5880180066BD10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		863562411A583A6F00537DEF /* Build configuration list for PBXNativeTarget "gerenciadorTarefasTests" */ = {
+		86112B5F1A5880180066BD10 /* Build configuration list for PBXNativeTarget "gerenciadorTarefasTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				863562421A583A6F00537DEF /* Debug */,
-				863562431A583A6F00537DEF /* Release */,
+				86112B601A5880180066BD10 /* Debug */,
+				86112B611A5880180066BD10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		86112B411A5880180066BD10 /* gerenciadorTarefas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				86112B421A5880180066BD10 /* gerenciadorTarefas.xcdatamodel */,
+			);
+			currentVersion = 86112B421A5880180066BD10 /* gerenciadorTarefas.xcdatamodel */;
+			path = gerenciadorTarefas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 863562171A583A6F00537DEF /* Project object */;
+	rootObject = 86112B321A5880180066BD10 /* Project object */;
 }

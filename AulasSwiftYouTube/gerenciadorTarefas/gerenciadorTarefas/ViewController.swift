@@ -3,13 +3,14 @@
 //  gerenciadorTarefas
 //
 //  Created by Eduardo dos santos on 03/01/15.
-//  Copyright (c) 2015 Eduardo dos santos. All rights reserved.
+//  Copyright (c) 2015 megamil. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+    
     @IBOutlet weak var tabela: UITableView!
     @IBOutlet weak var entradaTarefas: UITextField!
     
@@ -25,9 +26,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //Ajusta o tamanho das linhas na table view, mas também tem que deixar como 0 o numero de linhas da label da cecula.
         tabela.rowHeight = UITableViewAutomaticDimension
         
-    
+        
     }
-
+    
     @IBAction func addTarefa() {
         
         //Valida se o usuário digitou algo
@@ -50,19 +51,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     //Informar quantas linhas de retorno existiram para serem exibidas.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
+        
         return tarefas.count
         
     }
     
-   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
         let cell = tabela.dequeueReusableCellWithIdentifier("Cells", forIndexPath: indexPath) as UITableViewCell
-    
+        
         configurandoCell(cell, atIndexPath: indexPath)
-
+        
         return cell
-    
+        
     }
     
     func configurandoCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
@@ -89,3 +90,4 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
 }
+
