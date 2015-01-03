@@ -73,11 +73,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     //UITextFieldDelegate entrada com enter(Return)
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Void {
         
         addTarefa()
         
-        return true
     }
     
     //Deleta um item da lista
