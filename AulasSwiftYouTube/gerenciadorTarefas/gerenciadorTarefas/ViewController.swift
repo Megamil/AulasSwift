@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tabela: UITableView!
     @IBOutlet weak var entradaTarefas: UITextField!
@@ -44,46 +44,29 @@ class ViewController: UIViewController {
         //Recarrega as informações da tabela
         tabela.reloadData()
         
-        println(tarefas)
+    }
+    //Informar quantas linhas de retorno existiram para serem exibidas.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+        return tarefas.count
+        
+    }
+    
+   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    
+        let cell = tabela.dequeueReusableCellWithIdentifier("Cells", forIndexPath: indexPath) as UITableViewCell
+    
+        configurandoCell(cell, atIndexPath: indexPath)
+
+        return cell
+    
+    }
+    
+    func configurandoCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+        
+        let tarefa = tarefas[indexPath.row]
+        cell.textLabel?.text = tarefa
         
     }
 
 }
-
-
-
-
-
-
-
-
-
-/*
-
-//Informar quantas linhas de retorno existiram para serem exibidas.
-func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-return tasks.count
-
-}
-
-
-func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-
-let cell = tabela.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-
-configurandoCell(cell, atIndexPath: indexPath)
-
-return cell
-
-}
-
-func configurandoCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
-
-let task = tasks[indexPath.row]
-cell.textLabel?.text = task
-
-}
-
-*/
-
