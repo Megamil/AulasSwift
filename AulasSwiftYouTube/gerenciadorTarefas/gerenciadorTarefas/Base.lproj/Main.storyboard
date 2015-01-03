@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="gerenciadorTarefas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-o1-tx7">
+                                <rect key="frame" x="0.0" y="84" width="600" height="516"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cells" id="OZW-AM-dky">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OZW-AM-dky" id="mvX-md-Dg0">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adicione uma tarefa" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PNO-46-7Xg">
+                                <rect key="frame" x="27" y="20" width="527" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caf-rc-cMk">
+                                <rect key="frame" x="562" y="24" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="fxJ-zJ-Kd4"/>
+                                </constraints>
+                                <color key="tintColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTarefa" destination="BYZ-38-t0r" eventType="touchUpInside" id="XGu-Yi-4Jl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wbg-o1-tx7" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="7Tm-7a-0Rs"/>
+                            <constraint firstItem="caf-rc-cMk" firstAttribute="leading" secondItem="PNO-46-7Xg" secondAttribute="trailing" constant="8" symbolic="YES" id="DWd-kd-Vje"/>
+                            <constraint firstItem="caf-rc-cMk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LYe-qf-G1b"/>
+                            <constraint firstItem="PNO-46-7Xg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="O8T-zd-ssN"/>
+                            <constraint firstItem="PNO-46-7Xg" firstAttribute="centerY" secondItem="caf-rc-cMk" secondAttribute="centerY" id="RtS-Ug-LzP"/>
+                            <constraint firstAttribute="trailing" secondItem="Wbg-o1-tx7" secondAttribute="trailing" id="dXH-NE-iEC"/>
+                            <constraint firstItem="Wbg-o1-tx7" firstAttribute="top" secondItem="PNO-46-7Xg" secondAttribute="bottom" constant="34" id="fk5-JU-IjG"/>
+                            <constraint firstItem="PNO-46-7Xg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iLZ-j3-lCt"/>
+                            <constraint firstItem="Wbg-o1-tx7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y7R-r9-MAc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="entradaTarefas" destination="PNO-46-7Xg" id="Tei-Mg-pfZ"/>
+                        <outlet property="tabela" destination="Wbg-o1-tx7" id="t5R-94-VbJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="375"/>
+        </scene>
+    </scenes>
+</document>
