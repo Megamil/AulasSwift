@@ -21,6 +21,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //indica que o delegate do campo está aqui.
         entradaTarefas.delegate = self
+        
+        //Ajusta o tamanho das linhas na table view, mas também tem que deixar como 0 o numero de linhas da label da cecula.
+        tabela.rowHeight = UITableViewAutomaticDimension
+        
     
     }
 
@@ -68,11 +72,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    //UITextFieldDelegate
+    //UITextFieldDelegate entrada com enter(Return)
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         addTarefa()
         
         return true
+    }
+    
+    //Deleta um item da lista
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            tarefas.removeAtIndex(indexPath.row)
+            tabela.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+        
     }
 }
