@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var tabela: UITableView!
     @IBOutlet weak var entradaTarefas: UITextField!
@@ -18,11 +18,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        //indica que o delegate do campo está aqui.
+        entradaTarefas.delegate = self
+    
     }
 
     @IBAction func addTarefa() {
@@ -68,5 +67,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.text = tarefa
         
     }
-
+    
+    //UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        addTarefa()
+        
+        return true
+    }
 }
