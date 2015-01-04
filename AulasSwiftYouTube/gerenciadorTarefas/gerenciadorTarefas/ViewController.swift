@@ -7,14 +7,49 @@
 //
 
 import UIKit
+import CoreData
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tabela: UITableView!
     @IBOutlet weak var entradaTarefas: UITextField!
     
-    var tarefas = [String]()
+    //var tarefas = [String]() Usado antes do banco de dados.
+    
+    let contexto = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+    
+    var tarefas: NSFetchedResultsController {
+        //Verifica se já existe conteúdo.
+        if _tarefas != nil {
+            return _tarefas!
+        }
+        
+        //Consultando
+        let request = NSFetchRequest()
+        request.entity = NSEntityDescription.entityForName("Tarefas", inManagedObjectContext: contexto!)
+        request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        
+        let result = NSFetchedResultsController(fetchRequest: request, managedObjectContext: contexto!, sectionNameKeyPath: nil, cacheName: nil)
+        
+        result.delegate = self
+        _tarefas = result
+        
+        var error: NSError? = nil
+        
+        //Em caso de erros, imprime o erro o encerra
+        if !_tarefas!.performFetch(&error){
+            print(error)
+            abort()
+        }
+        
+        return _tarefas!
+    }
+    
+    
+    
+    
+    var _tarefas: NSFetchedResultsController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +64,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    
+    
+    
     @IBAction func addTarefa() {
         
         //Valida se o usuário digitou algo
@@ -37,7 +75,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         //Adiciona o conteúdo ao Array
-        tarefas.append(entradaTarefas.text)
+        //tarefas.append(entradaTarefas.text) usado para o array
+        let novaTarefa = NSEntityDescription.insertNewObjectForEntityForName("Tarefas", inManagedObjectContext: contexto!) as Tarefas
+        novaTarefa.name = entradaTarefas.text
+        
+        //Em caso de erros ao inserir, imprime o erro o encerra
+        salvarContexto()
         
         //Limpa o campo de texto
         entradaTarefas.text = ""
@@ -46,15 +89,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         entradaTarefas.resignFirstResponder()
         
         //Recarrega as informações da tabela
-        tabela.reloadData()
+        //tabela.reloadData() usado antes do banco de dados
         
     }
+    
+    
+    
+    
+    func salvarContexto() {
+        
+        var error: NSError? = nil
+        if !contexto!.save(&error){
+            print(error)
+            abort()
+        }
+        
+    }
+    
+    
+    
+    
     //Informar quantas linhas de retorno existiram para serem exibidas.
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tarefas.count
+        //return tarefas.count usado antes do banco de dados
+        return tarefas.fetchedObjects!.count
         
     }
+    
+    
+    
+    
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
@@ -66,12 +132,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    
+    
+    
+    
     func configurandoCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         
-        let tarefa = tarefas[indexPath.row]
-        cell.textLabel?.text = tarefa
+        //let tarefa = tarefas[indexPath.row] usado antes do banco
+        
+        let tarefa = tarefas.fetchedObjects![indexPath.row] as Tarefas
+        cell.textLabel?.text = tarefa.name
         
     }
+    
+    
+    
     
     //UITextFieldDelegate entrada com enter(Return)
     func textFieldShouldReturn(textField: UITextField) -> Void {
@@ -80,14 +155,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    
+    
+    
+    
     //Deleta um item da lista
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if editingStyle == .Delete {
-            tarefas.removeAtIndex(indexPath.row)
-            tabela.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        //tarefas.removeAtIndex(indexPath.row) usado antes do banco de dados
+            
+        contexto?.deleteObject(tarefas.objectAtIndexPath(indexPath) as NSManagedObject)
+            salvarContexto()
+        //tabela.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic) usado antes do banco de dados
         }
         
+    }
+    
+    //NSFetchedResultsControllerDelegate chamado ao alterar um objeto
+    func controller(controller: NSFetchedResultsController, didChangeObject object: AnyObject, atIndexPath indexPath: NSIndexPath, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath) {
+        
+        switch type {
+            case NSFetchedResultsChangeType.Insert:
+            self.tabela.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
+            case NSFetchedResultsChangeType.Delete:
+            self.tabela.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            case NSFetchedResultsChangeType.Update:
+            self.configurandoCell(tabela.cellForRowAtIndexPath(indexPath)!, atIndexPath: indexPath)
+                default:
+                    return
+            
+        }
     }
 }
 
