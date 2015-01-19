@@ -14,7 +14,9 @@
 		86112B4A1A5880180066BD10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86112B491A5880180066BD10 /* Images.xcassets */; };
 		86112B4D1A5880180066BD10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86112B4B1A5880180066BD10 /* LaunchScreen.xib */; };
 		86112B591A5880180066BD10 /* gerenciadorTarefasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86112B581A5880180066BD10 /* gerenciadorTarefasTests.swift */; };
+		865207CB1A64885100DE9DAB /* TarefasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865207CA1A64885100DE9DAB /* TarefasTableViewCell.swift */; };
 		869A42BC1A5886F60059559B /* Tarefas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869A42BB1A5886F60059559B /* Tarefas.swift */; };
+		869B07F41A6DCAAB00171ED7 /* UIColor+tarefas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B07F31A6DCAAB00171ED7 /* UIColor+tarefas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,9 @@
 		86112B521A5880180066BD10 /* gerenciadorTarefasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gerenciadorTarefasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86112B571A5880180066BD10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86112B581A5880180066BD10 /* gerenciadorTarefasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gerenciadorTarefasTests.swift; sourceTree = "<group>"; };
+		865207CA1A64885100DE9DAB /* TarefasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefasTableViewCell.swift; sourceTree = "<group>"; };
 		869A42BB1A5886F60059559B /* Tarefas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarefas.swift; sourceTree = "<group>"; };
+		869B07F31A6DCAAB00171ED7 /* UIColor+tarefas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+tarefas.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,8 @@
 				86112B4B1A5880180066BD10 /* LaunchScreen.xib */,
 				86112B621A5885170066BD10 /* Model */,
 				86112B3D1A5880180066BD10 /* Supporting Files */,
+				865207CA1A64885100DE9DAB /* TarefasTableViewCell.swift */,
+				869B07F31A6DCAAB00171ED7 /* UIColor+tarefas.swift */,
 			);
 			path = gerenciadorTarefas;
 			sourceTree = "<group>";
@@ -228,8 +234,10 @@
 			files = (
 				86112B451A5880180066BD10 /* ViewController.swift in Sources */,
 				86112B431A5880180066BD10 /* gerenciadorTarefas.xcdatamodeld in Sources */,
+				869B07F41A6DCAAB00171ED7 /* UIColor+tarefas.swift in Sources */,
 				869A42BC1A5886F60059559B /* Tarefas.swift in Sources */,
 				86112B401A5880180066BD10 /* AppDelegate.swift in Sources */,
+				865207CB1A64885100DE9DAB /* TarefasTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

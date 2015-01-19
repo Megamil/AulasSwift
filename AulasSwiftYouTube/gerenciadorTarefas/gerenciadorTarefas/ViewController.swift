@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, NSFetchedResultsControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tabela: UITableView!
     @IBOutlet weak var entradaTarefas: UITextField!
@@ -60,6 +60,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         //Ajusta o tamanho das linhas na table view, mas também tem que deixar como 0 o numero de linhas da label da cecula.
         tabela.rowHeight = UITableViewAutomaticDimension
+        tabela.registerClass(TarefasTableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+        tabela.backgroundColor = UIColor.frontColor()
+        self.view.backgroundColor = UIColor.frontColor()
         
         
     }
@@ -122,9 +125,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell! {
         
-        let cell = tabela.dequeueReusableCellWithIdentifier("Cells", forIndexPath: indexPath) as UITableViewCell
+        let cell = tabela.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TarefasTableViewCell
         
         configurandoCell(cell, atIndexPath: indexPath)
         
@@ -136,7 +139,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    func configurandoCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
+    func configurandoCell(cell: TarefasTableViewCell, atIndexPath indexPath: NSIndexPath) {
         
         //let tarefa = tarefas[indexPath.row] usado antes do banco
         
@@ -154,9 +157,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         addTarefa()
         
     }
-    
-    
-    
     
     
     //Deleta um item da lista
@@ -181,7 +181,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             case NSFetchedResultsChangeType.Delete:
             self.tabela.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             case NSFetchedResultsChangeType.Update:
-            self.configurandoCell(tabela.cellForRowAtIndexPath(indexPath)!, atIndexPath: indexPath)
+            self.configurandoCell(tabela.cellForRowAtIndexPath(indexPath)! as TarefasTableViewCell, atIndexPath: indexPath)
                 default:
                     return
             
